@@ -4,7 +4,7 @@
 
 let
 
-		swayPath =  lib.mkOutOfStoreSymlink ./dotfiles/sway/config; 
+		swayPath =  config.lib.mkOutOfStoreSymlink ./dotfiles/sway/config; 
 in
 {
 
