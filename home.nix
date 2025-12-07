@@ -29,8 +29,13 @@
   };
 
 
+	
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/nvim;
-  xdg.configFile."sway/config".source = lib.mkForce  lib.mkOutOfStoreSymlink ./dotfiles/sway/config; 
+  
+	let 
+		swayPath =  lib.mkOutOfStoreSymlink ./dotfiles/sway/config; 
+	in
+		xdg.configFile."sway/config".source = lib.mkForce swayPath;
 
 
 		# 	DIOPORCO 
