@@ -155,7 +155,7 @@
     enable = true;
     enableCompletion = true;
 		shellAliases = {
-			nix-git = "git add . && git commit -m '.' && git push && sudo nixos-rebuild switch --flake 'github:Bardolomeo/nixos#nightqu33n'";
+			nix-git = "git add . && git commit -m '.' && git push && sudo nixos-rebuild switch --flake .#nightqu33n'";
 		};
 		bashrcExtra = "";
 
