@@ -32,7 +32,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             # TODO replace ryan with your own username
-	    home-manager.users.magigraph = import ./home.nix;
+						home-manager.users.magigraph = import ./home.nix;
             home-manager.users.root = import ./root.nix;
 	    # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
