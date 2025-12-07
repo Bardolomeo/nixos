@@ -106,6 +106,7 @@ in
 			nwg-bar
 			fuzzel
 			nix-fast-build
+			waybar
 		]; 
 
 		programs.brave = {
