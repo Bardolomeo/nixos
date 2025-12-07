@@ -243,7 +243,7 @@ bar {
 default_border pixel 1
 gaps inner 10 
 gaps outer 5
-font fira-code Regular 18
+font fira-code Regular 1
 
 default_floating_border pixel 0
 titlebar_padding 1
