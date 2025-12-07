@@ -3,7 +3,6 @@
 ... }:
 
 let
-
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway; 
 in
 {
