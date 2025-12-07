@@ -156,7 +156,7 @@
 		shellAliases = {
 			nix-git = "git add . && git commit -m '.' && git push && sudo nixos-rebuild --flake 'github:Bardolomeo/nixos#nightqu33n'";
 		};
-		bashrcExtra = "#DIOPORCO";
+		bashrcExtra = "";
 
   };
 
