@@ -100,6 +100,7 @@ in
 			# git
 
 			lazygit
+			wmenu
 			nix-fast-build
 		]; 
 
