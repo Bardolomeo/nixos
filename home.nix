@@ -126,7 +126,7 @@
 
 			services.gnome-keyring.enable = true;
 		
-		wayland.windowManager.sway = {};
+		wayland.windowManager.sway = { enable = true; };
 
 		# ouput configuration daemon for displays (Sway)
 		systemd.user.services.kanshi = {
