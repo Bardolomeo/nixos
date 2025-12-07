@@ -53,7 +53,7 @@
   mplus-outline-fonts.githubRelease
   dina-font
   proggyfonts
-	pongo
+	nerdfonts
 ];
 
   programs = {
