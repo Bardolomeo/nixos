@@ -1,6 +1,11 @@
 { config, pkgs, system, lib, 
 
 ... }:
+
+let
+
+		swayPath =  lib.mkOutOfStoreSymlink ./dotfiles/sway/config; 
+in
 {
 
   
@@ -32,7 +37,6 @@
 	
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/nvim;
   
-		swayPath =  lib.mkOutOfStoreSymlink ./dotfiles/sway/config; 
 		xdg.configFile."sway/config".source = lib.mkForce swayPath;
 
 
