@@ -31,7 +31,6 @@
 
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/nvim;
 
-	xdg.configFile.".bashrc".source =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/.bashrc;
  
   # alternatively, one could write the configuration inline as follows
   # xdg.configFile."neofetch/config.conf".text = '' #content here '';
@@ -156,7 +155,7 @@
     enableCompletion = true;
 		shellAliases = {
 		nix-git = "git add && git commit -m "." && git push && sudo nixos-rebuild --flake 'github:Bardolomeo/nixos#nightqu33n'"
-		}
+		};
     # TODO add your custom bashrc here
 
   };
