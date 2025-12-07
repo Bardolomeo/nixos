@@ -128,6 +128,7 @@
 			enable = true;
 			wrapperFeatures.gtk = true; # Fixes common issues with GTK 3 apps
 		};
+		stylix.targets.sway.enable = false;
 
 		# ouput configuration daemon for displays (Sway)
 		systemd.user.services.kanshi = {
