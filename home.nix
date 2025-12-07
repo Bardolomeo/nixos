@@ -30,7 +30,7 @@
 
 
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/nvim;
-  xdg.configFile."sway/config".source = lib.mkDefault ./dotfiles/sway/config;
+  xdg.configFile."sway/config".source = lib.mkForce ./dotfiles/sway/config;
 
 
 		# 	DIOPORCO 
