@@ -22,6 +22,7 @@ set $menu wmenu-run
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 input * xkb_layout it
+output * bg /home/magigraph/repos/nixos/dotfiles/sway/claymore-bg.jpg
 #
 # Example configuration:
 #

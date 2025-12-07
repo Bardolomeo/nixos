@@ -35,8 +35,9 @@ in
 
 	
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/nvim;
-  
-		xdg.configFile."sway/config".source = lib.mkForce swayPath;
+	xdg.configFile."sway/config".source = lib.mkForce swayPath;
+  xdg.configFile."rofi/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/rofi;
+
 
 
 		# 	DIOPORCO 
