@@ -124,10 +124,7 @@
 
 			services.gnome-keyring.enable = true;
 		
-		wayland.windowManager.sway = {
-			enable = true;
-			wrapperFeatures.gtk = true; # Fixes common issues with GTK 3 apps
-		};
+		wayland.windowManager.sway = {};
 
 		# ouput configuration daemon for displays (Sway)
 		systemd.user.services.kanshi = {
