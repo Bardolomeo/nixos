@@ -32,6 +32,8 @@
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/nvim;
   xdg.configFile."sway/config".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config;
 
+
+		# 	DIOPORCO 
  
   # alternatively, one could write the configuration inline as follows
   # xdg.configFile."neofetch/config.conf".text = '' #content here '';
