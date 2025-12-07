@@ -101,6 +101,10 @@ in
 
 			lazygit
 			wmenu
+			rofi
+			rofi-wifi-menu
+			nwg-bar
+			fuzzel
 			nix-fast-build
 		]; 
 
