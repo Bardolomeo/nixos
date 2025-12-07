@@ -124,17 +124,6 @@
   
   wayland.windowManager.sway = {
     enable = true;
-    wrapperFeatures.gtk = true; # Fixes common issues with GTK 3 apps
-    config = rec {
-      modifier = "Mod4";
-      # Use kitty as default terminal
-      terminal = "kitty"; 
-      input."*".xkb_layout = "it";
-      startup = [
-        # Launch Firefox on start
-        {command = "exec sleep 5; systemctl --user start kanshi.service";}
-      ];
-    };
   };
 
   # ouput configuration daemon for displays (Sway)
