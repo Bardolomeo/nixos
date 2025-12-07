@@ -30,6 +30,9 @@
 
 
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/nvim;
+
+	xdg.configFile.".bashrc".source =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/.bashrc;
+ 
   # alternatively, one could write the configuration inline as follows
   # xdg.configFile."neofetch/config.conf".text = '' #content here '';
 
@@ -151,13 +154,9 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    # TODO add your custom bashrc here
-    bashrcExtra = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-			alias nixos-git="git add && git commit -m '.' && git push && sudo nixos-rebuild switch --flake 'github:Bardolomeo/nixos#nightqu33n'" 
-    '';
 
-    # set some aliases, feel free to add more or remove some
+    # TODO add your custom bashrc here
+
   };
 
   # This value determines the home Manager release that your
