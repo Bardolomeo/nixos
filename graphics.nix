@@ -1,6 +1,6 @@
-{config, pkgs, ...} :
-{
+{config, pkgs, lib, ...} :
 
+{
 	environment.pathsToLink = [ "/share/xdg-desktop-portal" "/share/applications" ];
 
 	xdg.portal = {
@@ -8,9 +8,7 @@
     extraPortals = with pkgs; [ xdg-desktop-portal-gtk xdg-desktop-portal-wlr ];
     config.common.default = "*";
   };
-{ config, pkgs, lib, ... }:
 
-{
   environment.systemPackages = with pkgs; [
     grim # screenshot functionality
     slurp # screenshot functionality
@@ -26,7 +24,6 @@
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
-  };
 }
 	programs.wayland = {
 		enable = true;
