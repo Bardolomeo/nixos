@@ -8,7 +8,6 @@ in
 {
 
   
-	include "/etc/sway/config.d/*";
   # TODO  please change the username & home directory to your own
   home.username = "magigraph";
   home.homeDirectory = "/home/magigraph";
