@@ -4,7 +4,7 @@
 	home.packages = with pkgs; [ 
 		nil
 		tailwindcss-language-server
-		pylsp
+		python-lsp-server	
 		clangd
 		cssls
 		qt6.qtdeclarative
