@@ -102,12 +102,8 @@ in
 			# git
 
 			lazygit
-			wmenu
 			rofi
-			nwg-bar
-			fuzzel
 			nix-fast-build
-			waybar
 
 			# LSP
 			nodePackages_latest.nodejs
