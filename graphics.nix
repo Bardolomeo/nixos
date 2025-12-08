@@ -8,4 +8,16 @@
     extraPortals = with pkgs; [ xdg-desktop-portal-gtk xdg-desktop-portal-wlr ];
     config.common.default = "*";
   };
+
+	programs.wayland = {
+		enable = true;
+		xwayland.enable = true;
+		withUWSM = true;
+	};
+	
+	programs.sway = {
+		enable = true;
+		wrapperFeatures.gtk = true;
+	}
+
 }

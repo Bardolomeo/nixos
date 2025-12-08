@@ -139,7 +139,10 @@ in
 
 			services.gnome-keyring.enable = true;
 		
-		wayland.windowManager.sway = { enable = true; };
+		wayland.windowManager.sway = { 
+			wrapperFeatures.gtk = true;
+			enable = true; 
+		};
 
 		# ouput configuration daemon for displays (Sway)
 		systemd.user.services.kanshi = {
