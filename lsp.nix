@@ -3,7 +3,7 @@
 
 	home.packages = with pkgs; [ 
 		nil
-		qt5.full
+		qt5
 		qtcreator
 		typescript-language-server 
 	];
