@@ -142,7 +142,7 @@ in
 		wayland.windowManager.sway = { 
 			wrapperFeatures.gtk = true;
 			enable = true; 
-			systemd.variable = ["--all"];
+			systemd.variables = ["--all"];
 		};
 
 		# ouput configuration daemon for displays (Sway)
