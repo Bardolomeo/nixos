@@ -10,6 +10,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 			./audio.nix
+			./graphics.nix
     ];
 
   # Bootloader.
