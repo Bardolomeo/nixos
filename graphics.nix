@@ -9,6 +9,8 @@
     config.common.default = "*";
   };
 
+  xdg.configFile."quickshell/".source = config.lib.file.mkOutOfStoreSymddlink ./dotfiles/nvim;
+
   environment.systemPackages = with pkgs; [
     grim # screenshot functionality
     slurp # screenshot functionality
