@@ -112,7 +112,7 @@ in
 			# LSP
 			nodePackages_latest.nodejs
 			nodePackages_latest.typescript-language-server
-			nodePackages_latest.clangd
+			nodePackages.clangd
 		]; 
 
 		programs.brave = {
