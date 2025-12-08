@@ -1,6 +1,6 @@
 { config, pkgs, lib, home, ...} :
-{
-	
+let
+
 	pypackages = [
     (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
       # select Python packages here
@@ -8,6 +8,9 @@
       requests
     ]))
   ];
+in
+{
+	
 	
 	home.packages = with pkgs; [ 
 		nil
