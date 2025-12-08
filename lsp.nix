@@ -2,9 +2,9 @@
 {
 
 	home.packages = with pkgs; [ 
+		python3
 		nil
 		tailwindcss-language-server
-		"python3.12-python-lsp-server"
 		libclang
 		vscode-css-languageserver
 		qt6.qtdeclarative
