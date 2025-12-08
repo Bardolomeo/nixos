@@ -12,8 +12,7 @@
 		typescript-language-server 
 		(python3.withPackages (python-pkgs: with python-pkgs; [
       # select Python packages here
-      pandas
-      requests
+			python-lsp-server
     ]))
 	];
 }
