@@ -56,6 +56,7 @@ in
     neofetch
     nnn # terminal file manager
     ranger
+		rust
 
     # archives
     zip
