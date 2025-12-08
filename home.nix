@@ -4,6 +4,7 @@
 
 let
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
+		quickshellPath = "${config.home.homeDirectory}/dotfiles/quickshell";
 in
 {
 
@@ -33,9 +34,9 @@ in
   };
 
 
-  xdg.configFile."quickshell/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/quickshell;
+  xdg.configFile."quickshell".source = config.lib.file.mkOutOfStoreSymlink quickshellPath; 
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/nvim;
-	xdg.configFile."sway/config".source = lib.mkForce swayPath;
+	xdg.configFile."sway/config".source = swayPath;
   xdg.configFile."rofi/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/rofi;
   xdg.configFile."waybar/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/waybar;
 
