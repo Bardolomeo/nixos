@@ -4,7 +4,7 @@
 
 let
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
-		quickshellPath = "${config.home.homeDirectory}/dotfiles/quickshell";
+		quickshellPath = ./dotfiles/quickshell;
 in
 {
 
