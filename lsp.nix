@@ -8,6 +8,6 @@
 		vscode-css-languageserver
 		qt6.qtdeclarative
 		typescript-language-server 
-		python3.python-lsp-server
+		python3.withPackages.python-pkgs.python-lsp-server
 	];
 }
