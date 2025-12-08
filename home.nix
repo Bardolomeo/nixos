@@ -104,6 +104,7 @@ in
 			lazygit
 			rofi
 			nix-fast-build
+			waybar
 
 			# LSP
 			nodePackages_latest.nodejs
