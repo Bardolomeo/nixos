@@ -83,8 +83,8 @@
 	
 	environment.systemPackages = with pkgs; [
   	neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default
-	git
-	kanshi
+		git
+		kanshi
   ];
 
   # ZEN-BROWSER
@@ -114,6 +114,8 @@
   services.printing.enable = true;
 
 
+	# audio
+	programs.pavucontrol.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -128,6 +130,8 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+
+	
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
