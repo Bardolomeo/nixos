@@ -3,7 +3,7 @@
 
 	home.packages = with pkgs; [ 
 		nil
-		qtdeclarative
+		qt6.qtdeclarative
 		typescript-language-server 
 	];
 }
