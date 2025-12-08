@@ -105,6 +105,7 @@ in
 			rofi
 			nix-fast-build
 			waybar
+			nodejs
 
 			# LSP
 			nodePackages_latest.nodejs

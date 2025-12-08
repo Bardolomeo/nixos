@@ -1,6 +1,8 @@
 import Quickshell // for PanelWindow
 import QtQuick // for Text
 
+
+
 PanelWindow {
   anchors {
     top: true
@@ -14,6 +16,6 @@ PanelWindow {
     // center the bar in its parent component (the window)
     anchors.centerIn: parent
 
-    text: "hello world"
+    text: "yooooo"
   }
 }
