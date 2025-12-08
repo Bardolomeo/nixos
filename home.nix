@@ -1,10 +1,10 @@
-{ config, pkgs, system, lib, home, 
+{ config, pkgs, system, lib, 
 
 ... }:
 
 let
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
-		quickshellPath = "${home.homeDirectory}/nixos/dotfiles/quickshell";
+		quickshellPath = /home/magigraph/nixos/dotfiles/quickshell;
 in
 {
 
