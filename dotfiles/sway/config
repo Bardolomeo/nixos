@@ -7,6 +7,8 @@
 # nixos compatible config
 include /etc/sway/config.d/*
 
+
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -25,7 +27,7 @@ set $menu rofi
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
 input * xkb_layout it
-output * bg /home/magigraph/repos/nixos/dotfiles/sway/claymore-bg.jpg fill
+#output * bg /home/magigraph/repos/nixos/dotfiles/sway/claymore-bg.jpg fill
 #
 # Example configuration:
 #

@@ -33,8 +33,8 @@ in
     "Xcursor.size" = 64;
   };
 
-
-  xdg.configFile."quickshell".source = config.lib.file.mkOutOfStoreSymlink quickshellPath; 
+	pkgs.runCommandLocal qukchsell
+  home.file."quickshell".source = config.lib.file.mkOutOfStoreSymlink quickshellPath;
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/nvim;
 	xdg.configFile."sway/config".source = lib.mkForce swayPath;
   xdg.configFile."rofi/".source = config.lib.file.mkOutOfStoreSymlink ./dotfiles/rofi;
