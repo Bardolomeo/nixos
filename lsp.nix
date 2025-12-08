@@ -3,7 +3,7 @@
 
 	home.packages = with pkgs; [ 
 		nil
-		tailwind-language-server
+		tailwindcss-language-server
 		pylsp
 		clangd
 		cssls
