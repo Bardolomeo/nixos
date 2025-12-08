@@ -25,10 +25,5 @@
     enable = true;
     wrapperFeatures.gtk = true;
 };
-	programs.wayland = {
-		enable = true;
-		xwayland.enable = true;
-		withUWSM = true;
-	};
 	
 }
