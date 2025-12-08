@@ -108,6 +108,11 @@ in
 			fuzzel
 			nix-fast-build
 			waybar
+
+			# LSP
+			nodePackages_latest.nodejs
+			nodePackages_latest.typescript-language-server
+			nodePackages_latest.clangd
 		]; 
 
 		programs.brave = {
