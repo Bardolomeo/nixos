@@ -3,6 +3,7 @@
 
 	home.packages = with pkgs; [ 
 		nil
+		qt
 		typescript-language-server 
 	];
 }

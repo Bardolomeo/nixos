@@ -6,13 +6,13 @@
 
 {
 
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
 			./audio.nix
 			./graphics.nix
     ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
