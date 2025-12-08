@@ -111,8 +111,6 @@ in
 			nodePackages_latest.typescript-language-server
 		]; 
 		
-		# FOR MASON
-		programs.nix-ld.enable = true;
 
 		programs.brave = {
 			enable = true;

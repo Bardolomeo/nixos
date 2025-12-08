@@ -63,6 +63,8 @@
   # Install firefox.
   firefox.enable = true;
 
+	# FOR MASON
+	nix-ld.enable = true;
 
   neovim.enable = true;
   neovim.defaultEditor = true;
