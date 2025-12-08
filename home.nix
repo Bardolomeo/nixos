@@ -143,6 +143,7 @@ in
 			wrapperFeatures.gtk = true;
 			enable = true; 
 			systemd.variables = ["--all"];
+			include "/etc/sway/config.d/*";
 		};
 
 		# ouput configuration daemon for displays (Sway)
