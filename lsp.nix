@@ -1,9 +1,9 @@
 { config, pkgs, lib, home, ...} :
 {
 
-	home.kdePackages.qtedeclarative.enbale = true;
 	home.packages = with pkgs; [ 
 		nil
+		qtdeclarative
 		typescript-language-server 
 	];
 }
