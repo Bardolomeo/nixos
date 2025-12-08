@@ -5,8 +5,8 @@
 		nil
 		tailwindcss-language-server
 		"python3.12-python-lsp-server"
-		clangd
-		cssls
+		libclang
+		vscode-css-languageserver
 		qt6.qtdeclarative
 		typescript-language-server 
 	];
