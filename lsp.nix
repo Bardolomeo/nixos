@@ -9,6 +9,7 @@
 		libclang
 		vscode-css-languageserver
 		typescript-language-server 
+		qt5.qtdeclarative
 		(python3.withPackages (python-pkgs: with python-pkgs; [
       # select Python packages here
 			python-lsp-server
