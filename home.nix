@@ -4,7 +4,7 @@
 
 let
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
-		quickshellPath = /home/magigraph/nixos/dotfiles/quickshell;
+		quickshellPath = "/home/magigraph/nixos/dotfiles/quickshell";
 in
 {
 
