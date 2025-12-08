@@ -8,6 +8,7 @@ in
 {
 
   
+	include "/etc/sway/config.d/*";
   # TODO  please change the username & home directory to your own
   home.username = "magigraph";
   home.homeDirectory = "/home/magigraph";
@@ -143,7 +144,6 @@ in
 			wrapperFeatures.gtk = true;
 			enable = true; 
 			systemd.variables = ["--all"];
-			include "/etc/sway/config.d/*";
 		};
 
 		# ouput configuration daemon for displays (Sway)
