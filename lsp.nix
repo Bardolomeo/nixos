@@ -1,16 +1,14 @@
 { config, pkgs, lib, home, ...} :
-let
 
-	pypackages = [
+	
+{
+	home.packages = [
     (pkgs.python3.withPackages (python-pkgs: with python-pkgs; [
       # select Python packages here
       pandas
       requests
     ]))
   ];
-in
-{
-	
 	
 	home.packages = with pkgs; [ 
 		nil
