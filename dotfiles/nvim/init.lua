@@ -17,16 +17,15 @@ require('mini.deps').setup({ path = { package = path_package } })
 MiniDeps.add({ name = 'mini.nvim', checkout = 'stable' }) 
 
 
-MiniDeps.add("Bardolomeo/powerofneo.vim")
-
 vim.cmd.colorscheme("POWEROFNEO")
+MiniDeps.add("Bardolomeo/powerofneo.vim")
 MiniDeps.add('nvim-treesitter/nvim-treesitter', { branch = 'main', lazy=false, build=":TSUpdate"})
 MiniDeps.add("nvim-telescope/telescope.nvim")
 MiniDeps.add("nvim-lua/plenary.nvim")
 MiniDeps.add("kyazdani42/nvim-web-devicons")
 MiniDeps.add("pmizio/typescript-tools.nvim")
 MiniDeps.add("folke/which-key.nvim")
-MiniDeps.add("pocco81/auto-save.nvim")
+--- MiniDeps.add("pocco81/auto-save.nvim")
 MiniDeps.add('neovim/nvim-lspconfig')
 MiniDeps.add('hrsh7th/cmp-nvim-lsp')
 MiniDeps.add('hrsh7th/cmp-buffer')
@@ -36,8 +35,25 @@ MiniDeps.add('hrsh7th/nvim-cmp')
 MiniDeps.add('mason-org/mason.nvim')
 MiniDeps.add('redoxahmii/react-extract.nvim')
 MiniDeps.add('prettier/vim-prettier')
-MiniDeps.add('francescarpi/buffon.nvim', {
-	 
+MiniDeps.add('kelly-lin/ranger.nvim')
+
+local ranger_nvim = require("ranger-nvim")
+local ranger_width = 0.4
+local ranger_height = 0.5
+
+require('ranger-nvim').setup({ 
+	replace_netrw = true,
+	keybinds = {
+			["ov"] = ranger_nvim.OPEN_MODE.vsplit,
+			["ot"] = ranger_nvim.OPEN_MODE.tabedit,
+	},
+	ui = {
+		border = { "╔", "═" ,"╗", "║", "╝", "═", "╚", "║" },
+		height = ranger_height,
+		width = ranger_width,
+		x = 1,
+		y = 0,
+	}
 })
 
 require("mason").setup()
@@ -108,7 +124,6 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { buffer = bufnr, des
 vim.keymap.set("n", "e[", vim.diagnostic.goto_prev, { buffer = bufnr, desc = "Go to Next Diagnostic" })
 vim.keymap.set("n", "gl", vim.diagnostic.open_float, { buffer = bufnr, desc = "Open Diagnostic Float" })
 vim.keymap.set("n", "e]", vim.diagnostic.goto_next, { buffer = bufnr, desc = "Go to Previous Diagnostic" })
-vim.keymap.set("n", "<leader>q", ":q<CR>", {noremap = true})
 
 
 --- react-extract
@@ -119,10 +134,21 @@ vim.keymap.set({ "v" }, "<leader>rc", require("react-extract").extract_to_curren
 ---line number colors
 vim.api.nvim_set_hl(0, 'LineNr', { fg='#555000' })
 
---- Lexplore/netrw
-  
-vim.api.nvim_set_keymap("n", '<leader><leader>', ':let g:netrw_winsize = 15<CR>:Lexplore<CR>', {noremap = true})
+--- ranger
 
+vim.api.nvim_set_keymap("n", "<leader><leader>", "", {
+      noremap = true,
+      callback = function()
+        require("ranger-nvim").open(true)
+      end,
+    })
+  
+
+---other
+vim.api.nvim_set_keymap("i", 'ù', '~', {noremap = true})
+vim.api.nvim_set_keymap("i", '§', '`', {noremap = true})
+vim.keymap.set("n", "<leader>q", ":q<CR>", {noremap = true})
+vim.api.nvim_set_keymap("n", '<leader>w', ':w<CR>', {noremap = true})
 
 	vim.api.nvim_exec(
 	[[
