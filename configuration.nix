@@ -57,6 +57,8 @@
   proggyfonts
 ];
 
+ environment.systemPackages = with pkgs; [ nodejs ];
+
   programs = {
   
   # Install firefox.
