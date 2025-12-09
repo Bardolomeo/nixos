@@ -1,13 +1,9 @@
-{ config, pkgs, system, lib, inputs, 
-
-... }:
-{
+{ config, pkgs, system, lib, inputs,
 	nixvim = {
 		url = "github: nix-community/nixvim";
 
-	}
-
-}
+	}, ...}
+:
 let
 		
 		nvimConfig = import ./dotfiles/nvim/init.lua;
