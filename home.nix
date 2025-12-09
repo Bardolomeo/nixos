@@ -103,9 +103,18 @@ in
 			waybar
 
 			# LSP
-			nodePackages_latest.nodejs
-			nodePackages_latest.typescript-language-server
-		]; 
+
+		nil
+		tailwindcss-language-server
+		libclang
+		vscode-css-languageserver
+		typescript-language-server 
+		qt5.qtdeclarative
+		(python3.withPackages (python-pkgs: with python-pkgs; [
+      # select Python packages here
+			python-lsp-server
+    ]))
+	]; 
 
 		programs.brave = {
 			enable = true;
