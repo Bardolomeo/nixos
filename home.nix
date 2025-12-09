@@ -1,8 +1,5 @@
 { config, pkgs, system, lib, inputs, ...}:
 let
-		nixvim = import (builtins.fetchGit {
- 			url = "https://github.com/nix-community/nixvim";
- 		});
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
 		quickshellPath = "/home/magigraph/nixos/dotfiles/quickshell";
 in
@@ -15,7 +12,6 @@ in
 
 	imports = [
 		./lsp.nix
-		nixvim.homeModules.nixvim
 	]; 
 	
   # link the configuration file in current directory to the specified location in home directory
@@ -38,6 +34,7 @@ in
     "Xcursor.size" = 64;
   };
 
+  xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/nvim;
   xdg.configFile."quickshell/".source = config.lib.file.mkOutOfStoreSymlink quickshellPath;
 	xdg.configFile."sway/config".source = lib.mkForce swayPath;
   xdg.configFile."rofi/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/rofi;
@@ -188,13 +185,7 @@ in
 
   };
 
-		programs.neovim = {
-			enable = true;
-			plugins = with pkgs.vimPlugins; [
-				nvim-treesitter
-			];
-			extraLuaConfig = ''	vim.cmd.colorscheme("POWEROFNEO") '';
-		};
+		programs.neovim = {enable = true;};
 	
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
