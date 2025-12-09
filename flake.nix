@@ -15,11 +15,6 @@
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
-		nixvim = {
-			url = "github:nix-community/nixvim";
-
-		};
-
   };
 
   outputs = { nixpkgs, home-manager, nix-fast-build, nixvim, ... } @inputs : {
