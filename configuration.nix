@@ -74,16 +74,16 @@
   };
 
   # login manager	
-  services.greetd = {                                                      
-    enable = true;                                                         
-    settings = {                                                           
-      default_session = {                                                  
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
-        user = "magigraph";                                                  
-      };                                                                   
-      StandardError = "journal";
-    };                                                                     
-  };
+ # services.greetd = {                                                      
+ #   enable = true;                                                         
+ #   settings = {                                                           
+ #     default_session = {                                                  
+ #       command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd sway";
+ #       user = "magigraph";                                                  
+ #     };                                                                   
+ #     StandardError = "journal";
+ #   };                                                                     
+ # };
 
 
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -116,7 +116,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
+	services.displayManager.sddm.wayland.enable = true;
 
 	# audio
   services.pulseaudio.enable = false;

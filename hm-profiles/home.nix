@@ -45,6 +45,7 @@ in
     zip
     xz
     unzip
+		prettier
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
@@ -102,11 +103,11 @@ in
 
 			services.gnome-keyring.enable = true;
 		
-		wayland.windowManager.sway = { 
-			wrapperFeatures.gtk = true;
-			enable = true; 
-			systemd.variables = ["--all"];
-		};
+	#	wayland.windowManager.sway = { 
+	#		wrapperFeatures.gtk = true;
+	#		enable = true; 
+	#		systemd.variables = ["--all"];
+	#	};
 
 		# ouput configuration daemon for displays (Sway)
 		systemd.user.services.kanshi = {
@@ -124,7 +125,7 @@ in
     enable = true;
     enableCompletion = true;
 		shellAliases = {
-			nix-git = "git add . && git commit -m '.' && git push && sudo nixos-rebuild switch --flake .#nightqu33n";
+			nix-git = "git add . && git commit -m '.' ; git push && sudo nixos-rebuild switch --flake .#nightqu33n --impure";
 		};
 		bashrcExtra = "";
 
