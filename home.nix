@@ -41,15 +41,6 @@ in
   xdg.configFile."waybar/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/waybar;
 
 
-
-		# 	DIOPORCO 
- 
-  # alternatively, one could write the configuration inline as follows
-  # xdg.configFile."neofetch/config.conf".text = '' #content here '';
-
-	
-
-;
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
