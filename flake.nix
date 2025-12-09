@@ -24,14 +24,12 @@
 
   outputs = { nixpkgs, home-manager, nix-fast-build, nixvim, ... } @inputs : {
 
-	nixosConfigurations.nightqu33n = nixpkgs.lib.nixosSystem {	
-				
+	nixosConfigurations.nightqu33n = nixpkgs.lib.nixosSystem {		
+
         modules = [
           ./configuration.nix
-	
           # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
-					nixvim.homeModules.nixvim	
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -39,7 +37,8 @@
             # TODO replace ryan with your own username
 						home-manager.users.magigraph = import ./home.nix;
             home-manager.users.root = import ./root.nix;
-	    # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+						
+# Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
 
 
