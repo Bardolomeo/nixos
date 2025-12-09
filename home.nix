@@ -50,7 +50,19 @@ in
   # alternatively, one could write the configuration inline as follows
   # xdg.configFile."neofetch/config.conf".text = '' #content here '';
 
+	
+  programs.nixvim = {
+  	enable = true;
 
+	plugins = {
+ 	telescope = {
+ 		enable = true;
+ 	};
+ 	alpha = {
+ 		enable = true;
+ 	theme = "dashboard";
+ 	};
+  };
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
