@@ -1,7 +1,6 @@
 {
-  description = "NixOS configuration";
-
   inputs = {
+		description = "My NixOS Flake";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     # home-manager, used for managing user configuration
     home-manager = {

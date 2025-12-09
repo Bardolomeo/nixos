@@ -1,7 +1,9 @@
-{ config, pkgs, system, lib, inputs, ...}:
+{ config, pkgs, lib,  ...}:
 let
-		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
-		quickshellPath = "/home/magigraph/nixos/dotfiles/quickshell";
+		swayPath = /home/magigraph/nixos/dotfiles/sway;
+
+		hyprPath = /home/magigraph/nixos/dotfiles/sway;
+		quickshellPath = /home/magigraph/nixos/dotfiles/quickshell;
 in
 {
 
