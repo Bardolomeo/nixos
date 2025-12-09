@@ -175,7 +175,14 @@ in
 
 		programs.neovim = {
 			enable = true;
-			extraLuaConfig = " ${nvimConfig} ";
+			plugins = with pkgs.vimPlugins; [
+				powerofneo.nvim
+				nvim-treesitter
+			]
+			extraLuaConfig = ''
+					
+       vim.cmd.colorscheme("POWEROFNEO")
+			'';
 		};
 	
   # This value determines the home Manager release that your
