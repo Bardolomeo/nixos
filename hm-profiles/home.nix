@@ -11,14 +11,14 @@ in
 
 	imports = [
 		../system/lsp.nix
-		../graphics/hyprland.nix
 	]; 
 	
   xresources.properties = {
     "Xcursor.size" = 64;
   };
 
-		home.file."hypr/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/dotfiles/hypr;
+	xdg.configFile."hypr/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/dotfiles/hypr;
+	xdg.configFile."hypr/".force = true;
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/nvim;
   xdg.configFile."quickshell/".source = config.lib.file.mkOutOfStoreSymlink quickshellPath;
 	xdg.configFile."sway/".source = lib.mkForce swayPath;
@@ -34,7 +34,8 @@ in
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
     # feel free to add your own or remove some of them
-    home-manager
+    hyprland
+		home-manager
     quickshell
     neofetch
     nnn # terminal file manager
