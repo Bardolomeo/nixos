@@ -132,8 +132,9 @@
         "type": "github"
       },
       "original": {
-        "id": "nixvim",
-        "type": "indirect"
+        "owner": "nix-community",
+        "repo": "nixvim",
+        "type": "github"
       }
     },
     "root": {

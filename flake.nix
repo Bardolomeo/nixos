@@ -25,13 +25,13 @@
   outputs = { nixpkgs, home-manager, nix-fast-build, nixvim, ... } @inputs : {
 
 	nixosConfigurations.nightqu33n = nixpkgs.lib.nixosSystem {	
-
+				
         modules = [
           ./configuration.nix
 	
           # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
-					
+					nixvim.homeModules.nixvim	
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
