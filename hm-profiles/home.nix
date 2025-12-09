@@ -1,7 +1,6 @@
 { config, pkgs, lib,  ...}:
 let
-		{swayPath = /home/magigraph/nixos/dotfiles/sway;}
-
+		swayPath = /home/magigraph/nixos/dotfiles/sway;
 		hyprPath = /home/magigraph/nixos/dotfiles/sway;
 		quickshellPath = /home/magigraph/nixos/dotfiles/quickshell;
 in
@@ -13,7 +12,8 @@ in
   home.homeDirectory = "/home/magigraph";
 
 	imports = [
-		./lsp.nix
+		../system/lsp.nix
+		../graphics/hyprland.nix
 	]; 
 	
   # link the configuration file in current directory to the specified location in home directory
@@ -109,6 +109,7 @@ in
 			waybar
 			gcc
 	]; 
+
 
 		programs.brave = {
 			enable = true;
