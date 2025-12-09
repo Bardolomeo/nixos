@@ -1,12 +1,10 @@
 { config, pkgs, lib,  ...}:
 let
 		swayPath = /home/magigraph/nixos/dotfiles/sway;
-		hyprPath = /home/magigraph/nixos/dotfiles/hyprland;
 		quickshellPath = /home/magigraph/nixos/dotfiles/quickshell;
 in
 {
 
-  
   # TODO  please change the username & home directory to your own
   home.username = "magigraph";
   home.homeDirectory = "/home/magigraph";
@@ -71,43 +69,23 @@ in
     # networking tools
     dnsutils  # `dig` + `nslookup`
     socat # replacement of openbsd-netcat
-			nmap # A utility for network discovery and security auditing
-			ipcalc  # it is a calculator for the IPv4/v6 addresses
+		nmap # A utility for network discovery and security auditing
+		ipcalc  # it is a calculator for the IPv4/v6 addresses
 
 			# misc
-			cowsay
-			file
-			which
-			tree
-
-			# nix related
-			#
-			# it provides the command `nom` works just like `nix`
-			# with more details log output
-			nix-output-monitor
+		cowsay
+		file
+		which
+		tree
 
 			# productivity
-			hugo # static site generator
-			glow # markdown previewer in terminal
+		glow # markdown previewer in terminal
 
-			btop  # replacement of htop/nmon
-			iotop # io monitoring
-			iftop # network monitoring
-
-			# system call monitoring
-
-			# system tools
-
-			nix-fast-build
-			nix-eval-jobs
-			
-			# git
-
-			lazygit
-			rofi
-			nix-fast-build
-			waybar
-			gcc
+		btop  # replacement of htop/nmon
+		lazygit
+		rofi
+		waybar
+		gcc
 	]; 
 
 
