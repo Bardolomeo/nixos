@@ -1,6 +1,6 @@
 {pkgs, ...} :
 {
-	environment.systemPackages = with pkgs; [
+	home.programs = with pkgs; [
 		hyprland	
 	];
 
