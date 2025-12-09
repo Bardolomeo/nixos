@@ -1,6 +1,8 @@
 { config, pkgs, system, lib, inputs, ...}:
 let
-		nixvim = import (builtins.fetchGit {url = "https://github.com/nix-community/nixvim";});
+		nixvim = {
+			url = "https://github.com/nix-community/nixvim";
+		});
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
 		quickshellPath = "/home/magigraph/nixos/dotfiles/quickshell";
 in
@@ -13,7 +15,7 @@ in
 
 	imports = [
 		./lsp.nix
-		nixvim.nixosModules.nixvim
+		nixvim.homeModules.nixvim
 	]; 
 	
   # link the configuration file in current directory to the specified location in home directory
