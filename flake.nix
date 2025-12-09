@@ -15,7 +15,10 @@
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
-		
+		nixvim = {
+			url = "github:nix-community/nixvim";
+
+		}
 
   };
 
@@ -28,7 +31,7 @@
 	
           # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
-
+					
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

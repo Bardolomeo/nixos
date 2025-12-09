@@ -1,11 +1,5 @@
-{ config, pkgs, system, lib, inputs,
-	nixvim = {
-		url = "github: nix-community/nixvim";
-
-	}, ...}
-:
+{ config, pkgs, system, lib, inputs, ...}:
 let
-		
 		nvimConfig = import ./dotfiles/nvim/init.lua;
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
 		quickshellPath = "/home/magigraph/nixos/dotfiles/quickshell";
