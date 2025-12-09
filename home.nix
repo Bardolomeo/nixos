@@ -43,7 +43,7 @@ in
 
 	programs.neovim = {
 		enable = true;
-		extraLuaConfig = lib.fileContents ../dotfiles/nvim/init.lua
+		extraLuaConfig = lib.fileContents ../dotfiles/nvim/init.lua;
 	};
 
   # Packages that should be installed to the user profile.
