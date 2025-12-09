@@ -3,6 +3,7 @@
 ... }:
 
 let
+		nvimConfig = import ./dotfiles/nvim/init.lua;
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
 		quickshellPath = "/home/magigraph/nixos/dotfiles/quickshell";
 in
@@ -36,7 +37,6 @@ in
   };
 
   xdg.configFile."quickshell/".source = config.lib.file.mkOutOfStoreSymlink quickshellPath;
-  xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink   /home/magigraph/nixos/dotfiles/nvim;
 	xdg.configFile."sway/config".source = lib.mkForce swayPath;
   xdg.configFile."rofi/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/rofi;
   xdg.configFile."waybar/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/waybar;
@@ -173,6 +173,10 @@ in
 
   };
 
+		programs.neovim = {
+			enable = true;
+			extraLuaConfig = nvimConfig;
+		}
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
