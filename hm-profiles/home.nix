@@ -1,7 +1,7 @@
 { config, pkgs, lib,  ...}:
 let
 		swayPath = /home/magigraph/nixos/dotfiles/sway;
-		hyprPath = /home/magigraph/nixos/dotfiles/sway;
+		hyprPath = /home/magigraph/nixos/dotfiles/hyprland;
 		quickshellPath = /home/magigraph/nixos/dotfiles/quickshell;
 in
 {
