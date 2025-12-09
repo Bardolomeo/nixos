@@ -57,15 +57,14 @@ MiniDeps.add('hrsh7th/vim-vsnip')
 
 
 
-
-lsps = {'tailwindcss', 'cssls', 'pylsp', 'ts_ls', 'clangd', 'qmlls', 'nix'}
+local lspconfig = require("lspconfig")
+lsps = {tailwindcss, cssls, pylsp, ts_ls, clangd, qmlls, nix}
 lspsLength = # (lsps)
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 print(lsps)
 for i = 1, lspsLength do
-	vim.lsp.config(lsps[i], {capabilities = default_capabilities})
-	vim.lsp.enable(lsps[i])
+	lspconfig.lsps[i].setup({capabilities = default_capabilities})
 end
 
 --- vim.lsp.config("nil", {
