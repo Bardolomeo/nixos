@@ -9,9 +9,11 @@
 
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-			./audio.nix
-			./graphics.nix
+      
+			#on fresh install use nixos-generate-config to get /etc/nixos/hardware-configuration.nix
+			./system/hardware-configuration.nix
+			./system/audio.nix
+			./graphics/graphics.nix
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
