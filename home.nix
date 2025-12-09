@@ -34,7 +34,7 @@ in
     "Xcursor.size" = 64;
   };
 
- # xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/nvim;
+  xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/nvim;
   xdg.configFile."quickshell/".source = config.lib.file.mkOutOfStoreSymlink quickshellPath;
 	xdg.configFile."sway/config".source = lib.mkForce swayPath;
   xdg.configFile."rofi/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/rofi;
@@ -43,7 +43,6 @@ in
 
 	programs.neovim = {
 		enable = true;
-		extraLuaConfig = lib.fileContents /home/magigraph/nixos/dotfiles/nvim/init.lua + lib.fileContents /home/magigraph/nixos/dotfiles/nvim/lua/nvim-cmp-config/init.lua;
 	};
 
   # Packages that should be installed to the user profile.
@@ -106,6 +105,7 @@ in
 			rofi
 			nix-fast-build
 			waybar
+			gcc
 	]; 
 
 		programs.brave = {
