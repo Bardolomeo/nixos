@@ -34,12 +34,17 @@ in
     "Xcursor.size" = 64;
   };
 
-  xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/nvim;
+ # xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/nvim;
   xdg.configFile."quickshell/".source = config.lib.file.mkOutOfStoreSymlink quickshellPath;
 	xdg.configFile."sway/config".source = lib.mkForce swayPath;
   xdg.configFile."rofi/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/rofi;
   xdg.configFile."waybar/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/waybar;
 
+
+	programs.neovim = {
+		enable = true;
+		extraLuaConfig = lib.fileContents ../dotfiles/nvim/init.lua
+	}
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
@@ -101,19 +106,6 @@ in
 			rofi
 			nix-fast-build
 			waybar
-
-			# LSP
-
-		nil
-		tailwindcss-language-server
-		libclang
-		vscode-css-languageserver
-		typescript-language-server 
-		qt5.qtdeclarative
-		(python3.withPackages (python-pkgs: with python-pkgs; [
-      # select Python packages here
-			python-lsp-server
-    ]))
 	]; 
 
 		programs.brave = {
@@ -173,7 +165,6 @@ in
 
   };
 
-		programs.neovim = {enable = true;};
 	
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
