@@ -32,7 +32,7 @@ MiniDeps.add('hrsh7th/cmp-buffer')
 MiniDeps.add('hrsh7th/cmp-path')
 MiniDeps.add('hrsh7th/cmp-cmdline')
 MiniDeps.add('hrsh7th/nvim-cmp')
---- MiniDeps.add('mason-org/mason.nvim')
+MiniDeps.add('mason-org/mason.nvim')
 MiniDeps.add('redoxahmii/react-extract.nvim')
 MiniDeps.add('prettier/vim-prettier')
 MiniDeps.add('kelly-lin/ranger.nvim')
@@ -56,7 +56,7 @@ require('ranger-nvim').setup({
 	}
 })
 
---- require("mason").setup()
+require("mason").setup()
 --- require("nvim-cmp-config")
 
 --- keymap
