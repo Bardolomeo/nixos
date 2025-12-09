@@ -178,7 +178,7 @@ in
 			plugins = with pkgs.vimPlugins; [
 				powerofneo.nvim
 				nvim-treesitter
-			]
+			];
 			extraLuaConfig = ''	vim.cmd.colorscheme("POWEROFNEO") '';
 		};
 	
