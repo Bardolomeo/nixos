@@ -1,7 +1,7 @@
 { ...} :
 {
  
- home.programs = {
+ programs = {
  		hyprland = {
 			enable = true;
 		};
