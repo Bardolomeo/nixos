@@ -173,10 +173,26 @@ in
 
   };
 
+		programs.nixvim = {
+			enable = true;
+			
+			extraPlugins = [
+				(pkgs.vimUtils.buildVimPlugin {  
+        name = "powerofneo.nvim";  
+        src = pkgs.fetchFromGitHub {  
+          owner = "Bardolomeo";  
+          repo = I"powerofneo.nvim";  
+          rev = "f75df1447edee57e74faf730ef47ec7a902a787d";  
+          hash = "1r2kvy83550fc62dzlvhq5i0ywxkz4az5nayabbacrki2cl97jfx";  
+        };  
+      })
+			];
+	
+		};
+
 		programs.neovim = {
 			enable = true;
 			plugins = with pkgs.vimPlugins; [
-				powerofneo.nvim
 				nvim-treesitter
 			];
 			extraLuaConfig = ''	vim.cmd.colorscheme("POWEROFNEO") '';
