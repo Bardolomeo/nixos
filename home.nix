@@ -3,6 +3,7 @@ let
 		nvimConfig = import ./dotfiles/nvim/init.lua;
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
 		quickshellPath = "/home/magigraph/nixos/dotfiles/quickshell";
+		nixvim.imports = import [./nvim.nix];
 in
 {
 
@@ -13,7 +14,6 @@ in
 
 	imports = [./lsp.nix]; 
 	
-	nixvim.imports = [./nvim.nix];
   # link the configuration file in current directory to the specified location in home directory
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
