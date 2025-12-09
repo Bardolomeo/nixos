@@ -1,6 +1,6 @@
 { config, pkgs, system, lib, inputs, ...}:
 let
-		nvimConfig = import ./dotfiles/nvim/init.lua;
+		nixvim = import (builtins.fetchGit {url = "https://github.com/nix-community/nixvim";});
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
 		quickshellPath = "/home/magigraph/nixos/dotfiles/quickshell";
 in
@@ -112,7 +112,10 @@ in
 			nodePackages_latest.typescript-language-server
 		]; 
 		
-
+			imports = [nixvim.nixosModules.nixvim];
+ 			programs.nixvim = {
+ 				enable = true;
+ 			};
 		programs.brave = {
 			enable = true;
 			package = pkgs.brave;
