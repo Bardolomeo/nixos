@@ -1,4 +1,4 @@
-{ config, pkgs, system, lib, 
+{ config, pkgs, system, lib, inputs, 
 
 ... }:
 
@@ -15,7 +15,10 @@ in
   home.homeDirectory = "/home/magigraph";
 
 	imports = [./lsp.nix]; 
-
+	inputs.nixvim = {
+        url = "github:nix-community/nixvim";
+        # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+	};
   # link the configuration file in current directory to the specified location in home directory
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
