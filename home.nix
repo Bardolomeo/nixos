@@ -179,10 +179,7 @@ in
 				powerofneo.nvim
 				nvim-treesitter
 			]
-			extraLuaConfig = ''
-					
-       vim.cmd.colorscheme("POWEROFNEO")
-			'';
+			extraLuaConfig = ''	vim.cmd.colorscheme("POWEROFNEO") '';
 		};
 	
   # This value determines the home Manager release that your
