@@ -17,7 +17,7 @@ in
     "Xcursor.size" = 64;
   };
 
-	xdg.configFile."hypr/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/dotfiles/hypr;
+	xdg.configFile."hypr/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/hypr;
 	xdg.configFile."hypr/".force = true;
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/nvim;
   xdg.configFile."quickshell/".source = config.lib.file.mkOutOfStoreSymlink quickshellPath;
