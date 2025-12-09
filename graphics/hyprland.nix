@@ -1,6 +1,9 @@
-{ config, pkgs, lib,  ...} :
+{ ...} :
 {
-	programs.hyprland = {
-		enable = true;
+ 
+ home.programs = {
+ 		hyprland = {
+			enable = true;
+		};
 	};
 }
