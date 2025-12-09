@@ -19,7 +19,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nightqu33n"; # Define your hostname.
+		programs.hyprland.enable = true; # enable Hyprland
+		programs.hyprland.withUWSM = true;
+
+	networking.hostName = "nightqu33n"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
