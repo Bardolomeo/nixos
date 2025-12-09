@@ -58,6 +58,7 @@ in
  	telescope = {
  		enable = true;
  	};
+	web-devicons.enable.true;
  	alpha = {
  		enable = true;
  	theme = "dashboard";
