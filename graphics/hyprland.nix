@@ -1,10 +1,6 @@
-{pkgs, ...} :
+{ ...} :
 {
-	home.packages = with pkgs; [
-		hyprland	
-	];
-
-	programs.hyprland = {
+	wayland.windowManager.hyprland = {
 		enable = true;
 	};
 }
