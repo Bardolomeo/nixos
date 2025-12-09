@@ -57,11 +57,12 @@ in
 	plugins = {
  	telescope = {
  		enable = true;
- 	};};
+ 	};
  	alpha = {
  		enable = true;
  	theme = "dashboard";
  	};
+  };
   };
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
