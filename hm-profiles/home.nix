@@ -18,9 +18,10 @@ in
     "Xcursor.size" = 64;
   };
 
+		home.file."hypr/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/dotfiles/hypr;
   xdg.configFile."nvim/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/nvim;
   xdg.configFile."quickshell/".source = config.lib.file.mkOutOfStoreSymlink quickshellPath;
-	xdg.configFile."sway/config".source = lib.mkForce swayPath;
+	xdg.configFile."sway/".source = lib.mkForce swayPath;
   xdg.configFile."rofi/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/rofi;
   xdg.configFile."waybar/".source = config.lib.file.mkOutOfStoreSymlink /home/magigraph/nixos/dotfiles/waybar;
 
@@ -131,6 +132,5 @@ in
 
   };
 
-	programs.home-manager.enable = true;
   home.stateVersion = "25.11";
 }
