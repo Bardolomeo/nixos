@@ -11,7 +11,10 @@ in
   home.username = "magigraph";
   home.homeDirectory = "/home/magigraph";
 
-	imports = [./lsp.nix, nixvim.nixosModules.nixvim]; 
+	imports = [
+		./lsp.nix
+		nixvim.nixosModules.nixvim
+	]; 
 	
   # link the configuration file in current directory to the specified location in home directory
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
