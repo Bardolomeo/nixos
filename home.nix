@@ -57,7 +57,7 @@ in
 	plugins = {
  	telescope = {
  		enable = true;
- 	};
+ 	};};
  	alpha = {
  		enable = true;
  	theme = "dashboard";
@@ -129,9 +129,6 @@ in
 			nodePackages_latest.typescript-language-server
 		]; 
 
- 			programs.nixvim = {
- 				enable = true;
- 			};
 		programs.brave = {
 			enable = true;
 			package = pkgs.brave;
