@@ -32,6 +32,7 @@
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
           home-manager.nixosModules.home-manager
           {
+						home-manager.users.magigraph.nixvim = import nixvim.homeModules.nixvim;
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             # TODO replace ryan with your own username
