@@ -175,7 +175,7 @@ in
 
 		programs.neovim = {
 			enable = true;
-			extraLuaConfig = nvimConfig;
+			extraLuaConfig = '' ${nvimConfig} '';
 		};
 	
   # This value determines the home Manager release that your
