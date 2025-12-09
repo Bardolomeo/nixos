@@ -3,7 +3,6 @@ let
 		nvimConfig = import ./dotfiles/nvim/init.lua;
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
 		quickshellPath = "/home/magigraph/nixos/dotfiles/quickshell";
-		nixvim.imports = import [./nvim.nix];
 in
 {
 
