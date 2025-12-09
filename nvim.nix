@@ -1,13 +1,10 @@
-{config, pkgs} : {
 
-	  inputs.nixvim = {
-    url = "github:nix-community/nixvim";
-    # If you are not running an unstable channel of nixpkgs, select the corresponding branch of Nixvim.
-    # url = "github:nix-community/nixvim/nixos-25.11";
+# nixvim.nix
+{ lib, ... }:
+{
+  # You can use lib.nixvim in your config
+  fooOption = lib.nixvim.mkRaw "print('hello')";
 
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
-} : {
-
-
+  # Configure Nixvim without prefixing with `plugins.nixvim`
+  plugins.my-plugin.enable = true;
 }

@@ -14,19 +14,14 @@
     	url = "github:Mic92/nix-fast-build";
         inputs.nixpkgs.follows = "nixpkgs";
     };
-		nixvim = {
-    	url = "github:nix-community/nixvim";
-    	# 	If you are not running an unstable channel of nixpkgs, select the corresponding branch of Nixvim.
-    	# url = "github:nix-community/nixvim/nixos-25.11";
 
-    	inputs.nixpkgs.follows = "nixpkgs";
-  	};
+		
+
   };
 
   outputs = { nixpkgs, home-manager, nix-fast-build, nixvim, ... } @inputs : {
 
-    nixosConfigurations.nightqu33n = nixpkgs.lib.nixosSystem {
-
+	nixosConfigurations.nightqu33n = nixpkgs.lib.nixosSystem {	
 
         modules = [
           ./configuration.nix
