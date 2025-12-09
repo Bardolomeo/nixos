@@ -1,8 +1,8 @@
 { config, pkgs, system, lib, inputs, ...}:
 let
-		nixvim = {
-			url = "github:nix-community/nixvim";
-		};
+		nixvim = import (builtins.fetchGit {
+ 			url = "https://github.com/nix-community/nixvim";
+ 		});
 		swayPath =  config.lib.file.mkOutOfStoreSymlink ./dotfiles/sway/config; 
 		quickshellPath = "/home/magigraph/nixos/dotfiles/quickshell";
 in
