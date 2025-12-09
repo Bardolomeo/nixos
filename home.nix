@@ -43,7 +43,7 @@ in
 
 	programs.neovim = {
 		enable = true;
-		extraLuaConfig = lib.fileContents /home/magigraph/nixos/dotfiles/nvim/init.lua + lib.fileContents /home/magigraph/nixos/dotfiles/nvim/lua/nvim_cmp_config/init.lua;
+		extraLuaConfig = lib.fileContents /home/magigraph/nixos/dotfiles/nvim/init.lua + lib.fileContents /home/magigraph/nixos/dotfiles/nvim/lua/nvim-cmp-config/init.lua;
 	};
 
   # Packages that should be installed to the user profile.

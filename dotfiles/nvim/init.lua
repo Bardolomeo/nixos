@@ -57,7 +57,7 @@ require('ranger-nvim').setup({
 })
 
 --- require("mason").setup()
-require("nvim-cmp-config")
+--- require("nvim-cmp-config")
 
 --- keymap
 vim.o.smartcase = true
